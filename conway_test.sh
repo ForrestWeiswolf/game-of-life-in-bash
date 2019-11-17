@@ -1,3 +1,13 @@
 #!/usr/bin/env bash
 
-echo 'hello test'
+#!/usr/bin/env bash
+
+INPUT=(0)
+EXPECTED=(0)
+OUTPUT=$(./conway.sh $INPUT)
+
+if [ "$OUTPUT" = "$EXPECTED" ]; then
+  echo "pass";
+else
+  echo "failure: expected $EXPECTED, but got $OUTPUT"
+fi
